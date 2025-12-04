@@ -4,7 +4,7 @@ Automatic script to preserve Cursor's chat history when a folder name is changed
 
 ## Usage
 
-1. **Rename the folder** (e.g., `soru` → `prim_hesabi`)
+1. **Rename the folder** (e.g., `old_folder` → `new_folder`)
 
 2. **Open Cursor with the new folder name** (to create the workspace)
 
@@ -14,12 +14,12 @@ Automatic script to preserve Cursor's chat history when a folder name is changed
 
 4. **Run the script from CMD or PowerShell** (NOT from Cursor terminal!):
    ```bash
-   cd C:\Users\Guzelbilen\Desktop\prim_hesabi
+   cd C:\Users\Guzelbilen\Desktop\new_folder
    python update_cursor_workspace_path_EN.py
    ```
 
 5. **The script will ask for the old folder name:**
-   - Enter the old folder name (e.g., `soru`)
+   - Enter the old folder name (e.g., `old_folder`)
    - The script finds the old workspace (based on the old folder name)
    - The script finds the new workspace (based on the new folder name)
    - Copies the `state.vscdb` file from the old workspace to the new workspace (for chat history)
@@ -41,16 +41,16 @@ Automatic script to preserve Cursor's chat history when a folder name is changed
 ## Example Usage
 
 ```bash
-# 1. Rename folder: soru → prim_hesabi
+# 1. Rename folder: old_folder → new_folder
 # 2. Open new folder with Cursor (to create workspace)
 # 3. COMPLETELY CLOSE CURSOR
 # 4. From CMD or PowerShell:
 
-cd C:\Users\Guzelbilen\Desktop\prim_hesabi
+cd C:\Users\Guzelbilen\Desktop\new_folder
 python update_cursor_workspace_path_EN.py
 
 # Script will ask for old folder name:
-# Old folder name: soru
+# Old folder name: old_folder
 
 # 5. After script completes, reopen Cursor
 ```
